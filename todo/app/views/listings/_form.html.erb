@@ -1,0 +1,28 @@
+<!-- the form partial -->
+<% if obj.errors.any? %>
+  <h2>There was an error in your submission</h2>
+  <!-- This would be the standard for going through multiple error messages -->
+  <ul>
+    <!-- this would iterate over muliple errer messages but in this case it would be just one -->
+    <% obj.errors.full_messages.each do |msg| %>
+      <!-- displays 'Description can't be blank' -->
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<!-- this is the form for creating the new todo item or editing a current todo listing item -->
+<%= form_for obj do |f| %>
+  <p>
+    <!-- sets 'Description' as the label -->
+    <%= f.label :description %>
+    <!-- text field for inputing your new todo item or edit it-->
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <!-- submits the form -->
+    <!-- if the todo listing item is a new object then it will display 'Create New Todo' -->
+    <!-- else it will display -->
+    <%= f.submit(obj.new_record? ? "Create New Todo" : "Edit Todo") %>
+  </p>
+<% end %>

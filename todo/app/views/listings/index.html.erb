@@ -1,0 +1,27 @@
+<!-- root(/) -->
+
+<h1 class="header">Todo's</h1>
+
+
+<!-- iterates over each listings item inorder to dispaly them in this ul -->
+<% @listings.each do |listing| %>
+  <ul>
+    <!-- displays each todo list item in listings -->
+    <li class="flow-text"><%= listing.description %></li>
+       <!-- this links to the current list item -->
+      <%= link_to 'view', listing_path(listing), class: 'waves-effect waves-light green lighten-3 btn' %>
+    
+      <!-- this is a link to edit the current todo list item also passes its :id to the path -->
+      <%= link_to 'edit', edit_listing_path(listing), class: 'waves-effect waves-light cyan lighten-3 btn' %>
+  
+      <!-- this is a link to delete the current todo listing item from the the todo list -->
+      <!-- prompts the user if he/she really want to delete the listing item -->
+      <%= link_to 'delete', listing, method: :delete, data: { confirm: "Are you sure?" }, class: 'waves-effect waves-light  red accent-2  btn' %>
+  </ul>
+  
+<% end %>
+
+
+
+<!-- this links to the new todo page-->
+<%= link_to "Creat new todo", new_listing_path, class: 'btn waves-effect waves-light red lighten-3' %>

@@ -1,0 +1,16 @@
+<!-- /listings/:id -->
+
+<h1>View your todo</h1>
+
+<!-- shows the current todo listing item -->
+<p class="flow-text">
+  <%= @listing.description %>
+</p>
+<!-- links to the edit todo page  -->
+<p>
+  <%= link_to "edit this todo", edit_listing_path(@listing), class: 'waves-effect waves-light btn' %>
+</p>
+<!-- links to the index(root) todo page  -->
+<p>
+  <%= link_to "back to your Todo's listing", listings_path, class: 'waves-effect waves-light btn' %>
+</p>
