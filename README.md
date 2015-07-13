@@ -2,7 +2,7 @@
 
 By Marcus Barnes
 
-Implemented some style using the materializecss framework inorder to make the TodoApp actullay look pleasant. 
+Implemented some style using the materializecss framework in order to make the TodoApp actullay look pleasant. 
 
 Added the following:
 - header & footer partials
