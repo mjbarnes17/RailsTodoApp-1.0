@@ -4,7 +4,7 @@ By Marcus Barnes
 
 Implemented some style using the materializecss framework inorder to make the TodoApp actullay look pleasant. 
 
-Added the follewing:
+Added the following:
 - header & footer partials
 - buttons
 - new text inputs
