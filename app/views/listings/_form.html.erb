@@ -23,6 +23,6 @@
     <!-- submits the form -->
     <!-- if the todo listing item is a new object then it will display 'Create New Todo' -->
     <!-- else it will display -->
-    <%= f.submit(obj.new_record? ? "Create New Todo" : "Edit Todo") %>
+    <%= f.submit(obj.new_record? ? "Create New Todo" : "Edit Todo", :class => 'waves-effect waves-light btn') %>
   </p>
 <% end %>
